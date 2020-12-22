@@ -149,7 +149,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
                         ? textStyle.copyWith(color: Colors.grey)
                         : textStyle,
                   ),
-                  onPressed: selectedCount == 0 ? null : _onTapPreview,
+                  onPressed: selectedCount == 0 ? null : sure,
                 ),
               )
               
