@@ -149,7 +149,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
                         ? textStyle.copyWith(color: Colors.grey)
                         : textStyle,
                   ),
-                  onPressed: selectedCount == 0 ? null : sure,
+                  onPressed: selectedCount == 0 ? null : _onTapPreview,
                 ),
               )
               
@@ -297,7 +297,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
     var data = list[index];
     return RepaintBoundary(
       child: GestureDetector(
-        onTap: () => _onItemClick(data, index),
+        //onTap: () => _onItemClick(data, index),
         child: Stack(
           children: <Widget>[
             ImageItem(

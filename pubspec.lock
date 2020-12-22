@@ -84,9 +84,11 @@ packages:
   photo_manager:
     dependency: "direct main"
     description:
-      path: "../photo_manager-0.5.8"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: d0f6133e99961803b345d8fddc60fac5c8057aa1
+      url: "https://github.com/pmrajani/photo_manager.git"
+    source: git
     version: "0.5.8"
   sky_engine:
     dependency: transitive
