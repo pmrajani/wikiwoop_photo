@@ -23,8 +23,7 @@ class _ChangeGalleryDialogState extends State<ChangeGalleryDialog> {
   @override
   Widget build(BuildContext context) {
     return
-    Expanded(
-    child:Column(
+   Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
@@ -37,28 +36,32 @@ class _ChangeGalleryDialogState extends State<ChangeGalleryDialog> {
           ),
           color: Colors.white, 
         ),
-        Container(
+        Expanded(
+          child:Container(
           child: Padding(
-            child:Container(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemBuilder: _buildItem,
-                itemCount: widget.galleryList.length,
-              ),
+              child: Container(
+                child:
+                ListView.builder(
+                  //shrinkWrap: true,
+                  itemBuilder: _buildItem,
+                  itemCount: widget.galleryList.length,
+                  ),
+                
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey),
                 color: Colors.white,
-              ),
-              
+              )
+
             ),
             padding: EdgeInsets.all(8.0),
           ),
           color: Colors.grey[100],
+        ) ,
         )
         
+        
       ],
-    )
-  );
+    );
     
   }
 
